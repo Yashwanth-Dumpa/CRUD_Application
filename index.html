@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="top">
+                <!--<h1 class="google">Google</h1>-->
+                <img style = "width:70px" src="google-1-1-logo-png-transparent.png"/>
+                <p class="signIn">Sign in</p>
+                <p style="margin-bottom: 40px;">to continue to Gmail</p>
+            </div>
+            <div class="body">
+                <div class="creds">
+                    <input class="emailBox" type="text" id="email" placeholder="Email or phone"/>
+                    <a class="link">Forgot email?</a>
+                </div>
+                <div class="creds">
+                    <input class="password" type="password" id="password" placeholder="Password"/>
+                    <a class="link">Forgot password?</a>
+                </div>
+                <p>Not your computer? Use Guest mode to sign in privately.</p>
+                <a class="link">Learn more</a>
+            
+                <div class="footer">
+                    <a class="link">Create account</a>
+                    <button class="button" id="button">Next</button>
+                </div>
+                <p id="message" style="color:red"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
