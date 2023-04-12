@@ -12,8 +12,8 @@ let messageEle = document.getElementById("message");
 let userEle = document.getElementById("user");
 let mailText;
 let pwdText;
-
 /*Function Submit details that submits the entered data after validation*/
+
 
 function submitDetails(){
     mailText = mailEle.value;
@@ -25,16 +25,18 @@ function submitDetails(){
     } else if(pwdText===""){
         messageEle.style.color = 'red';
         messageEle.textContent = "Enter password";
-
+        
     }else{
-        messageEle.style.color = 'green';
+        let passwordVal = validatePassword(pwdText);
         let mailValue = validateEmail(mailText);
         //userEle.textContent = mailEle.value;
-        
-        if(mailValue){
+        //messageEle.style.color = 'green';
+        if(mailValue && passwordVal){
             window.location.href = "details.html";
-        } else{
+        } else if(!mailValue){
             alert("Enter Valid Email address");
+        } else if(!passwordVal){
+            alert("Enter correct password");
         }
        
         // messageEle.textContent = "Success";
